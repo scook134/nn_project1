@@ -6,8 +6,6 @@ This project studies concept bottleneck modeling on Fashion-MNIST, with the goal
 
 The central motivation is that concept-based models expose an interpretable intermediate representation that can be inspected and manipulated. This can improve transparency and enable concept-level interventions, but it may also constrain raw predictive performance if the concept set is incomplete. In this project, Fashion-MNIST provides a simple benchmark for testing that trade-off.
 
-One important implementation detail is that the repository now matches the requested dropout sweep more closely than before: the notebook evaluates `p in {0.0, 0.1, 0.3, 0.5, 0.7, 0.9}` and the intervention experiment now covers all 8 concepts. The remaining limitations are therefore less about missing experiment branches and more about how results are saved and analyzed.
-
 ## 2. Experimental Setup
 
 The dataset is Fashion-MNIST from `torchvision`, consisting of `28 x 28` grayscale images across 10 clothing categories: T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, and Ankle boot. The notebook uses a simple `ToTensor()` transform and standard train/test splits.
